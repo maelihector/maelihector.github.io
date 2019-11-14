@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:100&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Alex+Brush|Nothing+You+Could+Do');
+
+header {
+  grid-area: header;
+}
+
+aside {
+  grid-area: aside;
+}
+
+main {
+  grid-area: main;
+  background: #000000ad;
+  max-width: 960px;
+  justify-self: center;
+  font-family: 'Josefin Sans', serif;
+  padding: 20px;
+}
+
+footer {
+  grid-area: footer;
+  background: #000000cf;
+  color: #9ea09e;
+  padding: 15px;
+  font-size: 9px;
+}
+
+header,
+aside {
+  background: #000000cf;
+  border-bottom: 1px solid #000000e0;
+}
+
+body {
+  background: url("../images/background.jpg");
+  background-size: 100%;
+  text-align: center;
+  min-height: 500px;
+  min-width: min-content;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto 1fr auto;
+  grid-template-areas:
+    "header"
+    "aside"
+    "main"
+    "footer";
+}
+
+a>img {
+  width: 6vw;
+  height: 6vw;
+  padding: 5px;
+}
+
+[src*="iconfinder"] {
+  border-radius: 50%;
+}
+
+[src*="iconfinder"]:hover {
+  background: #148e504a;
+}
+
+[active="true"] {
+  background: #e230308f;
+}
+
+.page-title {
+  text-align: center;
+  color: #f3ebeb;
+  font-family: 'Alex Brush', cursive;
+  font-size: 12vw;
+  border-bottom: 1px solid black;
+  margin-bottom: 10px;
+}
+
+.first-ltr-title {
+  color: #0d77f1;
+  text-shadow: 2px 2px 1px #051a31;
+}
+
+.second-ltr-title {
+  color: #2c8c67;
+  text-shadow: 2px 2px 1px #0e3a0c;
+}
+
+.green-background {
+  background: #2eab1840;
+  padding: 10px;
+  color: #f3ebebe3;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.5);
+}
+
+.violet-background {
+  background: #1b198059;
+  padding: 10px;
+  margin: 10px;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.5);
+}
+
+.purple-background {
+  padding: 10px;
+  color: #fbfbfb;
+  background-color: #8a1e642b;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.5);
+}
+
+.secondary-links {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 3px;
+  background: #ffffffed;
+  font: 400 11px system-ui;
+  align-self: center;
+}
+
+.secondary-links>a:hover {
+  color: #0d77f1;
+}
+
+h2 {
+  color: #f3ebeb;
+  font-family: 'Nothing You Could Do', cursive;
+}
+
+h3 {
+  color: #60b56b;
+  font-family: 'Nothing You Could Do', cursive;
+}
+
+@media (min-width: 400px) {
+
+  header {
+    border-bottom: none;
+  }
+
+  aside {
+    display: grid;
+    align-items: center;
+    align-content: center;
+  }
+
+  nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  body {
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+      "aside header"
+      "aside main"
+      "aside footer";
+  }
+
+  a>img {
+    width: 7vw;
+    height: 7vw;
+  }
+
+}
+
+@media (min-width: 600px) {
+
+  header,
+  aside {
+    border-bottom: none;
+  }
+
+  a>img {
+    width: 3vw;
+    height: 3vw;
+  }
+
+  .nav-tab-right {
+    justify-self: right;
+  }
+
+  .nav-tab-left {
+    justify-self: left;
+  }
+
+  body {
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+      "header header"
+      "aside main"
+      "footer footer";
+  }
+
+}
+
+@media (min-width: 960px) {
+
+  main {
+    margin: 5% 0;
+  }
+
+}

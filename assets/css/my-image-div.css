@@ -1,0 +1,125 @@
+div.my-image-div {
+  color: #ffffff;
+  font-size: 7px;
+  align-self: center;
+  display: grid;
+  grid-template-columns: repeat(6, auto);
+  grid-template-rows: repeat(6, auto);
+}
+
+.my-image-div>img {
+  justify-self: center;
+  border-radius: 50%;
+  grid-row: 1/7;
+  grid-column: 3/5;
+}
+
+.one,
+.two,
+.three,
+.four {
+  grid-row: 1/2;
+}
+
+.five,
+.six {
+  grid-row: 2/3;
+}
+
+.seven,
+.eight {
+  grid-row: 3/4;
+}
+
+.nine,
+.ten,
+.eleven,
+.tweleve {
+  grid-row: 4/5;
+}
+
+.thirteen,
+.fourteen {
+  grid-row: 5/6;
+}
+
+.fifteen,
+.sixteen,
+.seventeen,
+.eighteen {
+  grid-row: 6/7;
+}
+
+.five,
+.seven,
+.nine,
+.eleven,
+.thirteen {
+  grid-column: 2/3;
+}
+
+.one,
+.three,
+.fifteen,
+.seventeen {
+  grid-column: 3/4;
+}
+
+.two,
+.four,
+.sixteen,
+.eighteen {
+  grid-column: 4/5;
+}
+
+.six,
+.eight,
+.ten,
+.tweleve,
+.fourteen {
+  grid-column: 5/6;
+}
+
+.five,
+.six,
+.seven,
+.eight,
+.thirteen,
+.fourteen {
+  align-self: center;
+}
+
+.nine,
+.ten {
+  align-self: start;
+}
+
+.three,
+.four,
+.eleven,
+.tweleve,
+.seventeen,
+.eighteen {
+  align-self: end;
+}
+
+.eleven,
+.tweleve {
+  justify-self: center;
+}
+
+.four,
+.five,
+.ten,
+.thirteen,
+.sixteen {
+  justify-self: right;
+}
+
+.three,
+.six,
+.nine,
+.fourteen,
+.fifteen {
+  justify-self: left;
+}

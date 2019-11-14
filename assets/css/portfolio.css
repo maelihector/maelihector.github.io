@@ -1,0 +1,155 @@
+.main-portfolio.page-title {
+  grid-area: page-title;
+}
+
+.technologies {
+  grid-area: technologies;
+  width: 100%;
+}
+
+.technology-buttons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+  grid-template-rows: 1fr;
+}
+
+.submit-reset-div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+
+.tech-submit, .reset {
+  justify-self: center;
+  margin-top: 15px;
+  width: 50%;
+  padding: 10px;
+  background: #113f73a6;
+  color: #f3ebeb;
+}
+
+.tech-checkbox {
+  color: #f3ebeb;
+  background: #0000006b;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  font: 400 10px system-ui;
+  overflow-wrap: break-word;
+}
+
+.tech-checkbox:hover {
+  border: black solid 1px;
+  color: #e0dcdc;
+}
+
+.tech-checkbox:focus {
+  outline-style: none;
+}
+
+.checked {
+  background: #6b0707b4;
+}
+
+.unChecked {
+  background: #0000006b;
+}
+
+[name="project-tech-checked"] {
+  display: none;
+}
+
+.project>h3 {
+  padding: 7px;
+  font-size: 18px;
+}
+
+.second-child-link {
+  border-left: 1px solid #0d77f0;
+}
+
+#projects {
+  grid-area: projects;
+  min-height: 100px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+  grid-template-rows: 1fr;
+  grid-gap: 10px;
+  padding-top: 15px;
+  border-top: 1px solid black;
+  margin-top: 10px;
+  justify-content: center;
+}
+
+.project-technologies {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+  font: 400 11px system-ui;
+  padding: 5px 0;
+  margin: 5px 0;
+  color: #fbfbfb;
+  background-color: #8a1e642b;
+}
+
+#projects>div {
+  padding: 5px;
+  background: #1b198059;
+}
+
+.project {
+  display: grid;
+  grid-template-rows: auto auto auto auto;
+  grid-template-columns: auto;
+}
+
+.project-image {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+.main-portfolio {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 1fr auto auto;
+  grid-template-areas:
+    "page-title"
+    "technologies"
+    "projects";
+  grid-gap: 5px;
+}
+
+.displayNone {
+  display: none;
+}
+
+@media (min-width: 400px) {
+  #projects {
+    grid-template-columns: repeat(auto-fit, 40%);
+  }
+}
+
+@media (min-width: 550px) {
+  #projects {
+    grid-template-columns: repeat(auto-fit, 30%);
+  }
+}
+
+@media (min-width: 700px) {
+  #projects {
+    grid-template-columns: repeat(auto-fit, 19%);
+  }
+}
+
+@media (min-width: 900px) {
+  #projects {
+    grid-template-columns: repeat(auto-fit, 18%);
+  }
+}
+
+@media (min-width: 960px) {
+  .main-portfolio {
+    min-width: 960px;
+  }
+}

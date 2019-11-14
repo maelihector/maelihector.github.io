@@ -1,0 +1,89 @@
+.my-image-div img {
+  width: 200px;
+}
+
+div.my-name.page-title {
+  border-bottom: none;
+  margin-bottom: 0px;
+}
+
+.my-name {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto;
+}
+
+.first-name {
+  justify-self: right;
+}
+
+.last-name {
+  justify-self: left;
+}
+
+.my-name span {
+  font-size: 15vw;
+}
+
+.info-card>p {
+  color: #f3ebeb;
+  font-family: 'Josefin Sans', serif;
+}
+
+.my-image-div {
+  font-family: 'Nothing You Could Do', cursive;
+}
+
+@media (min-width: 400px) {
+
+  .main-index {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .info-card {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+
+  .short-intro {
+    grid-column: 1/2;
+    grid-row: auto;
+  }
+
+  .my-image-div {
+    grid-column: 2/3;
+    grid-row: 1/4;
+  }
+
+  .info-card {
+    align-self: end;
+  }
+
+  .my-name {
+    font-size: 9vw;
+  }
+
+}
+
+@media (min-width: 600px) {
+
+  .info-card>h2 {
+    font-size: 2vw;
+  }
+
+  .info-card {
+    max-width: fit-content;
+    align-self: center;
+    justify-self: center;
+  }
+
+  .my-name {
+    font-size: 6vw;
+  }
+
+  .my-name span {
+    font-size: 9vw;
+  }
+
+}
