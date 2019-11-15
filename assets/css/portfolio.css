@@ -66,6 +66,7 @@
 
 .second-child-link {
   border-left: 1px solid #0d77f0;
+  border-right: 1px solid #0d77f0;
 }
 
 #projects {
@@ -124,19 +125,19 @@
   display: none;
 }
 
-@media (min-width: 400px) {
+@media (min-width: 490px) {
   #projects {
     grid-template-columns: repeat(auto-fit, 40%);
   }
 }
 
-@media (min-width: 550px) {
+@media (min-width: 670px) {
   #projects {
     grid-template-columns: repeat(auto-fit, 30%);
   }
 }
 
-@media (min-width: 700px) {
+/* @media (min-width: 700px) {
   #projects {
     grid-template-columns: repeat(auto-fit, 19%);
   }
@@ -146,7 +147,7 @@
   #projects {
     grid-template-columns: repeat(auto-fit, 18%);
   }
-}
+} */
 
 @media (min-width: 960px) {
   .main-portfolio {
