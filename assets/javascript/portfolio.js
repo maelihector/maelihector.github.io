@@ -3,7 +3,7 @@ $(document).ready(function () {
   var portfolio = {
 
     // Technologies array
-    technologiesArray: ["HTML5", "CSS3", "Bootstrap", "Materialize", "JavaScript", "jQuery", "Handlebars", "Node.js", "Express", "ReactJS", "OOP", "Third-Party API", "Authentication", "SQL", "MySQL", "Sequelize", "Github Pages", "Heroku", "Firebase", "CLI (Command Line Interface)"],
+    technologiesArray: ["HTML5", "CSS3", "Bootstrap", "Materialize", "JavaScript", "jQuery", "Handlebars", "Node.js", "Express", "ReactJS", "OOP", "Third-Party API", "SQL", "MySQL", "Sequelize", "Github Pages", "Heroku", "Firebase", "CLI (Command Line Interface)"],
 
     projectsObject: {
       1: {
@@ -29,7 +29,7 @@ $(document).ready(function () {
         name: "Game of Thrones RPG",
         main_image: "https://repository-images.githubusercontent.com/187100245/04f0d580-821f-11e9-9bb9-1d13b8567891",
         website_link: "https://maelihector.github.io/javaScript-game-of-thrones-rpg/",
-        github_link: "https://github.com/maelihector/javaScript-game-of-thrones-rpg/blob/master/src/index.js",
+        github_link: "https://github.com/maelihector/javaScript-game-of-thrones-rpg/blob/master/assets/index.js",
         readme_link: "https://github.com/maelihector/javaScript-game-of-thrones-rpg#game-of-thrones-rpg",
         technologies: ["HTML5", "CSS3", "JavaScript", "Github Pages"]
       },
@@ -60,15 +60,15 @@ $(document).ready(function () {
         readme_link: "https://github.com/maelihector/Train-Scheduler#train-arrivals",
         technologies: ["HTML5", "CSS3", "Materialize", "JavaScript", "jQuery", "Firebase"]
       },
-      7: {
-        id: 7,
-        name: "Healthy Gorilla",
-        main_image: "https://repository-images.githubusercontent.com/126731970/d83ecb80-82bb-11e9-81e7-eb0266bd7ca0",
-        website_link: "https://healthygorilla.firebaseapp.com",
-        github_link: "https://github.com/maelihector/Healthy-Gorilla/tree/master/assets/js",
-        readme_link: "https://github.com/maelihector/Healthy-Gorilla#healthy-gorilla--hg",
-        technologies: ["HTML5", "CSS3", "Materialize", "JavaScript", "jQuery", "Third-Party API", "Authentication", "Firebase"]
-      },
+      // 7: {
+      //   id: 7,
+      //   name: "Healthy Gorilla",
+      //   main_image: "https://repository-images.githubusercontent.com/126731970/d83ecb80-82bb-11e9-81e7-eb0266bd7ca0",
+      //   website_link: "https://healthygorilla.firebaseapp.com",
+      //   github_link: "https://github.com/maelihector/Healthy-Gorilla/tree/master/assets/js",
+      //   readme_link: "https://github.com/maelihector/Healthy-Gorilla#healthy-gorilla--hg",
+      //   technologies: ["HTML5", "CSS3", "Materialize", "JavaScript", "jQuery", "Third-Party API", "Firebase"]
+      // },
       8: {
         id: 8,
         name: "Liri (Language Interpretation and Recognition Interface) CLI",
@@ -267,7 +267,12 @@ $(document).ready(function () {
       this.techProjects = arrayToObject(this.techProjects);
 
       // Rebuild projects list
-      this.listProjects(this.techProjects);
+      if (this.techsChecked.length == 0) {
+        this.listProjects(this.projectsObject);
+      } else {
+        this.listProjects(this.techProjects);
+      }
+
 
     }
   };
@@ -279,17 +284,9 @@ $(document).ready(function () {
   portfolio.listProjects();
 
   // Event for when the 'tech-submit' button is clicked
-  $(".tech-submit").click(function (event) {
+  $(".technology-buttons").click(function (event) {
     event.preventDefault();
     portfolio.handleTechSubmit();
   });
-
-  // Event to reset projects list to all
-  $('.reset').click(function () {
-    // Reload page
-    location.reload();
-  });
-
-
 
 });
